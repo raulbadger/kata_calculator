@@ -29,3 +29,21 @@ class MyTestCase(unittest.TestCase):
 
         actual_output = calculator.add(input_parameter)
         self.assertEqual(expected_output, actual_output)
+
+    def test_given_a_string_calculator_class_when_is_called_with_three_numbers_then_it_returns_the_add_of_the_numbers(
+            self):
+        input_parameter = '7,3,5'
+        expected_output = 15
+        calculator = Calculator()
+
+        actual_output = calculator.add(input_parameter)
+        self.assertEqual(expected_output, actual_output)
+
+    def test_given_a_string_calculator_class_when_is_called_with_seven_numbers_then_it_returns_the_add_of_the_numbers(
+            self):
+        input_parameter = '7,3,5,9,2,1,0'
+        expected_output = 27
+        calculator = Calculator()
+
+        actual_output = calculator.add(input_parameter)
+        self.assertEqual(expected_output, actual_output)

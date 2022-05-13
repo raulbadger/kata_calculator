@@ -8,7 +8,10 @@ class Calculator:
     def add(self, input_numbers):
         if self.is_two_numbers(input_numbers):
             split_numbers = input_numbers.split(self.SEPARATOR)
-            return int(split_numbers[0]) + int(split_numbers[1])
+            result = 0
+            for number in split_numbers:
+                result += int(number)
+            return result
         elif input_numbers == '':
             return 0
         return int(input_numbers)
